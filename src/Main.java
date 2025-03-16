@@ -10,11 +10,11 @@ public class Main {
                 System.out.print("Buzz");
                 printNumber = false;
             }
-            if (!printNumber) {
-                System.out.println();
+            if (printNumber) {
+                System.out.println(i);
                 continue;
             }
-            System.out.println(i);
+            System.out.println();
         }
     }
 }
