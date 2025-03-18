@@ -1,15 +1,19 @@
 public class Main {
+    static boolean printNumber;
+    static int i;
+
+    public static void printStringInsteadNumber(int number, String str) {
+        if (i % number == 0) {
+            System.out.print(str);
+            printNumber = false;
+        }
+    }
+
     public static void main(String[] args) {
-        for (int i = 1; i <= 100; i++) {
-            boolean printNumber = true;
-            if (i % 3 == 0) {
-                System.out.print("Fizz");
-                printNumber = false;
-            }
-            if (i % 5 == 0) {
-                System.out.print("Buzz");
-                printNumber = false;
-            }
+        for (i = 1; i <= 100; i++) {
+            printNumber = true;
+            printStringInsteadNumber(3, "Fizz");
+            printStringInsteadNumber(5, "Buzz");
             if (printNumber) {
                 System.out.println(i);
                 continue;
@@ -17,4 +21,5 @@ public class Main {
             System.out.println();
         }
     }
+
 }
